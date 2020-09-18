@@ -1,0 +1,108 @@
+<script >
+function a()
+{
+var c=0;
+num=parseInt(m.value);
+for(i=num;i>0;i=parseInt(i/10))
+c++;
+if(c!=10)
+{
+document.getElementById("k1").innerHTML="Invalid Mobile No";
+return false;
+}
+else
+document.getElementById("k1").innerHTML="";
+
+str=e.value;
+c1=str.indexOf("@");
+c2=str.indexOf(".com");
+if(c1==-1||c2==-1)
+{
+document.getElementById("k2").innerHTML="Invalid Email Id";
+return false;
+}
+else
+document.getElementById("k2").innerHTML="";
+
+
+pas=pass.value;
+
+p2=pas.indexOf("!")
+p3=pas.indexOf("$")
+p4=pas.indexOf("#")
+p5=pas.indexOf("@")
+p6=pas.indexOf("&")
+if((/[A-Z]/.test(pas)))
+	alert("KD")
+	p1=1;
+
+if(p1==1 && (p2>=0||p3>=0||p4>=0||p5>=0||p6>=0))
+
+document.getElementById("p").innerHTML="Password";
+
+else
+{
+document.getElementById("p").innerHTML="Invalid Password";
+return false;
+}
+
+}
+</script>
+<body bgcolor="teal">
+<form onsubmit="return a()" action="save.php">
+<table >
+<tr>
+<td>Name<font color="red">*</font></td>
+<td><input type="text" required></td>
+</tr>
+<tr>
+<td>Mobile No</td>
+<td><input type="text" id="m"><font color="red" id="k1"></font></td>
+</tr>
+<tr>
+<td>Dob</td>
+<td><input type="date"></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" id="e"><font color="red" id="k2"></font></td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea></textarea></td>
+</tr>
+
+
+<tr>
+<td>Course</td>
+<td><select>
+<option>Course</option>
+<option>C</option>
+<option>C++</option>
+<option>JAVA</option>
+<option>PHP</option>
+<option>PYTHON</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="g">M
+<input type="radio" name="g">F</td>
+</tr>
+<tr>
+	<td>Password<font color="red">*</td>
+	<td><input type="Password" id="pass"><font color="red" id="p"></font></td>
+</tr>
+<tr>
+<td>Upload Pic</td>
+<td><input type="file"></td>
+</tr>
+<tr>
+<td><input type="submit"></td>
+<td><input type="reset"></td>
+</tr>
+</table>
+</form>
+
+
